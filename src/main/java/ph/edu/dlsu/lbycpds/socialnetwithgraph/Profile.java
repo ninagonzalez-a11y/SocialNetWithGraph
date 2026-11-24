@@ -4,7 +4,7 @@ public class Profile {
     private final String name;
     private String status = "";
     private String quote = "";
-    private String imagePath = "unknown.png";
+    private String imagePath = "Unknown.png";
 
     public Profile(String name) { this.name = name; }
 

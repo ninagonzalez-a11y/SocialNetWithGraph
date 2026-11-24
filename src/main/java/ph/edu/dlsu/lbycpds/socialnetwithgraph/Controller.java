@@ -39,7 +39,7 @@ public class Controller {
             Image img = new Image(path);
             if (!img.isError()) return img;
         } catch (IllegalArgumentException ignored) { }
-        return new Image("unknown.png");
+        return new Image("Unknown.png");
     }
 
     // refreshes the display for one profile
@@ -76,7 +76,7 @@ public class Controller {
             if (current != null && current.getName().equals(name)) {
                 current = null;
                 friendList.clear();
-                pictureView.setImage(loadImage("unknown.png"));
+                pictureView.setImage(loadImage("Unknown.png"));
             }
             statusLabel.setText("Deleted " + name);
         } else {
