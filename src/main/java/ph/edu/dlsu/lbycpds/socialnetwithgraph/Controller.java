@@ -21,6 +21,9 @@ public class Controller {
     public TextField quoteLabel;
     public ImageView pictureView;
     public ListView<String> listView;
+    public Label displayNameLabel;
+    public Label displayStatusLabel;
+    public Label displayQuoteLabel;
 
     ObservableList<String> friendList;
 
@@ -47,7 +50,9 @@ public class Controller {
         current = p;
         friendList.setAll(graph.getFriends(p.getName()));
         pictureView.setImage(loadImage(p.getImagePath()));
-        // TODO: set name / status / quote display labels here
+        displayNameLabel.setText(p.getName());
+        displayStatusLabel.setText(p.getStatus());
+        displayQuoteLabel.setText(p.getQuote());
     }
 
     private boolean requireCurrent() {
@@ -97,6 +102,7 @@ public class Controller {
     public void handleStatus(ActionEvent e) {
         if (!requireCurrent()) return;
         current.setStatus(statusChangeLabel.getText().trim());
+        displayStatusLabel.setText(current.getStatus());
         statusLabel.setText("Status updated");
     }
 

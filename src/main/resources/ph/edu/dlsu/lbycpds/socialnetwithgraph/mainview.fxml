@@ -60,9 +60,9 @@
     <center>
         <AnchorPane prefHeight="358.0" prefWidth="491.0" BorderPane.alignment="CENTER">
             <children>
-                <Label layoutX="23.0" layoutY="8.0" prefHeight="38.0" prefWidth="154.0" text="FirstName LastName" />
-                <Label layoutX="27.0" layoutY="146.0" prefHeight="17.0" prefWidth="114.0" text="current status" />
-                <Label layoutX="165.0" layoutY="297.0" prefHeight="17.0" prefWidth="103.0" text="Favourite Quote" />
+                <Label layoutX="23.0" layoutY="8.0" prefHeight="38.0" prefWidth="154.0" fx:id="displayNameLabel" />
+                <Label layoutX="27.0" layoutY="146.0" prefHeight="17.0" prefWidth="114.0" fx:id="displayStatusLabel" />
+                <Label layoutX="165.0" layoutY="297.0" prefHeight="17.0" prefWidth="200.0" fx:id="displayQuoteLabel" wrapText="true" />
                 <Label layoutX="224.0" layoutY="5.0" prefHeight="37.0" prefWidth="94.0" text="Friends:" />
                 <ImageView fx:id="pictureView" fitHeight="125.0" fitWidth="122.0" layoutX="19.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
                     <image>
